@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&display=swap');
+
+:root {
+  --gray: #C8C6C6;
+  --red: #CD1818;  
+  --white: #FFFFFF;  
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+  display: grid;
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  place-items: center;
+  padding-top: 4%;
+}
+
+.modal {
+  align-items: center;
+  background: var(--red);
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 360px;
+}
+
+.main-image {
+  margin-top: -100px;
+  width: 314px;
+}
+
+.title {
+  color: var(--white);
+  font-size: 36px;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.subtitle {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+.stars-container {
+    position: relative;
+    margin-bottom: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .gray-stars-container {
+      margin: 0 auto;
+  }
+  .gray-stars-container img {
+    width: 35px; 
+  }
+  
+  .yellow-stars-container {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 60px;
+  }
+
+  .yellow-stars-container img {
+      width: 35px;
+  }
+
+.comment-box {
+  height: 0;
+}
+
+.comment-box label {
+  color: var(--white);
+  display: inline-block;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.comment-box textarea {
+  background: none;
+  border: 1px solid white;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: var(--white);
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  height: 80px;
+  margin-bottom: 24px;
+  padding: 12px;
+  width: 100%;
+}
+
+.comment-box textarea::placeholder {
+  color: var(--gray);
+}
+
+.submit-button {
+  background: var(--white);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+  width: 100%;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inline-block;
+  animation: visible 0.3s ease-in-out forwards;
+}
+
+@keyframes visible {
+  from {
+    height: 0;
+  }
+  to {
+    height: 138px;
+  }
+}
